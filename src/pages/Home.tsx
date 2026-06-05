@@ -41,16 +41,31 @@ export default function Home() {
 
   const [email, setEmail] = useState("");
 
-const handleSubscribe = () => {
+const handleSubscribe = async () => {
   if (!email.trim()) {
     alert("Escribe un correo válido");
     return;
   }
 
-  alert(`Gracias por suscribirte: ${email}`);
-  setEmail("");
-};
+  try {
+    const res = await fetch("http://localhost:3001/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
 
+    if (res.ok) {
+      alert("Correo enviado 🚀");
+      setEmail("");
+    } else {
+      alert("Error al suscribirse");
+    }
+  } catch (error) {
+    alert("Error de conexión");
+  }
+};
   return (
     <div className="bg-white dark:bg-black text-black dark:text-white min-h-screen transition-all duration-300">
       {/* NAVBAR */}
