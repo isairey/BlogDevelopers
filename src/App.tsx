@@ -11,6 +11,7 @@ import Backend from "./pages/category/Backend";
 import Devops from "./pages/category/Devops";
 import IA from "./pages/category/IA";
 import ArticleDetail from "./pages/ArticleDetail";
+import TutorialDetail from "./pages/TutorialDetail";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         <Route path="/ia" element={<IA />} />
 
         <Route path="/articulos/:id" element={<ArticleDetail />} />
-        
+        <Route path="/tutoriales/:id" element={<TutorialDetail />} />
       </Routes>
     </BrowserRouter>
   );
