@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+
 export default function Home() {
   const [dark, setDark] = useState(true);
 
@@ -37,6 +38,18 @@ export default function Home() {
       localStorage.setItem("theme", "light");
     }
   };
+
+  const [email, setEmail] = useState("");
+
+const handleSubscribe = () => {
+  if (!email.trim()) {
+    alert("Escribe un correo válido");
+    return;
+  }
+
+  alert(`Gracias por suscribirte: ${email}`);
+  setEmail("");
+};
 
   return (
     <div className="bg-white dark:bg-black text-black dark:text-white min-h-screen transition-all duration-300">
@@ -234,29 +247,33 @@ export default function Home() {
       {/* NEWSLETTER */}
 
       <section className="max-w-4xl mx-auto px-6 pb-24">
-        <div className="border border-zinc-200 dark:border-zinc-800 rounded-[32px] p-12 text-center">
-          <h2 className="text-4xl font-bold">
-            Únete a la comunidad
-          </h2>
+  <div className="border border-zinc-200 dark:border-zinc-800 rounded-[32px] p-12 text-center">
+    <h2 className="text-4xl font-bold">
+      Únete a la comunidad
+    </h2>
 
-          <p className="text-zinc-500 mt-4">
-            Recibe nuevos artículos y tutoriales cada semana.
-          </p>
+    <p className="text-zinc-500 mt-4">
+      Recibe nuevos artículos y tutoriales cada semana.
+    </p>
 
-          <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center">
-            <input
-              type="email"
-              placeholder="correo@ejemplo.com"
-              className="border border-zinc-300 dark:border-zinc-700 bg-transparent rounded-xl px-5 py-3 md:w-96"
-            />
+    <div className="flex flex-col md:flex-row gap-4 mt-8 justify-center">
+      <input
+        type="email"
+        placeholder="correo@ejemplo.com"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="border border-zinc-300 dark:border-zinc-700 bg-transparent rounded-xl px-5 py-3 md:w-96"
+      />
 
-            <button className="bg-black dark:bg-white dark:text-black text-white px-6 py-3 rounded-xl font-semibold">
-              Suscribirme
-            </button>
-          </div>
-        </div>
-      </section>
-
+      <button
+        onClick={handleSubscribe}
+        className="bg-black dark:bg-white dark:text-black text-white px-6 py-3 rounded-xl font-semibold"
+      >
+        Suscribirme
+      </button>
+    </div>
+  </div>
+</section>
       {/* FOOTER */}
 
       <footer className="border-t border-zinc-200 dark:border-zinc-800 py-10">
@@ -268,11 +285,12 @@ export default function Home() {
 
             <p className="text-zinc-500 text-sm mt-1">
               © 2026 Todos los derechos reservados.
+              IRP
             </p>
           </div>
 
           <div className="flex gap-6 text-zinc-500">
-            <a href="#">GitHub</a>
+            <a href="https://github.com/isairey">GitHub</a>
             <a href="#">LinkedIn</a>
             <a href="#">Twitter</a>
           </div>

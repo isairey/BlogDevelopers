@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* 👇 ESTO ACTIVA DARK MODE EN TAILWIND v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
   scroll-behavior: smooth;
 }
