@@ -12,7 +12,7 @@ import Devops from "./pages/category/Devops";
 import IA from "./pages/category/IA";
 import ArticleDetail from "./pages/ArticleDetail";
 import TutorialDetail from "./pages/TutorialDetail";
-
+import CategoryDetail from "./pages/CategoryDetail";
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +31,7 @@ function App() {
 
         <Route path="/articulos/:id" element={<ArticleDetail />} />
         <Route path="/tutoriales/:id" element={<TutorialDetail />} />
+        <Route path="/categorias/:id" element={<CategoryDetail />} />
       </Routes>
     </BrowserRouter>
   );
