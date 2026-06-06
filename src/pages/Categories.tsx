@@ -12,6 +12,7 @@ import {
 export default function Categories() {
   const categories = [
     {
+      id: "frontend",
       title: "Frontend",
       description:
         "React, Vue, Angular, TypeScript y diseño moderno.",
@@ -21,6 +22,7 @@ export default function Categories() {
     },
 
     {
+      id: "backend",
       title: "Backend",
       description:
         "Spring Boot, Node.js, APIs REST y Microservicios.",
@@ -30,6 +32,7 @@ export default function Categories() {
     },
 
     {
+      id: "devops",
       title: "DevOps",
       description:
         "Docker, Kubernetes, CI/CD y despliegues.",
@@ -39,6 +42,7 @@ export default function Categories() {
     },
 
     {
+      id: "inteligencia-artificial",
       title: "Inteligencia Artificial",
       description:
         "Machine Learning, Deep Learning y LLMs.",
@@ -48,6 +52,7 @@ export default function Categories() {
     },
 
     {
+      id: "bases-de-datos",
       title: "Bases de Datos",
       description:
         "MySQL, PostgreSQL, MongoDB y optimización.",
@@ -57,6 +62,7 @@ export default function Categories() {
     },
 
     {
+      id: "ciberseguridad",
       title: "Ciberseguridad",
       description:
         "Pentesting, Kali Linux, OWASP y redes.",
@@ -66,6 +72,7 @@ export default function Categories() {
     },
 
     {
+      id: "sistemas-operativos",
       title: "Sistemas Operativos",
       description:
         "Linux, Windows, procesos, memoria y kernels.",
@@ -75,6 +82,7 @@ export default function Categories() {
     },
 
     {
+      id: "arquitectura",
       title: "Arquitectura",
       description:
         "Clean Architecture, DDD y Microservicios.",
@@ -86,10 +94,9 @@ export default function Categories() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white px-6 py-12">
-
+      
       {/* HEADER */}
       <div className="max-w-7xl mx-auto">
-
         <Link
           to="/"
           className="text-zinc-500 hover:text-black dark:hover:text-white transition"
@@ -106,59 +113,62 @@ export default function Categories() {
           de desarrollo de software, inteligencia artificial,
           DevOps y tecnología.
         </p>
-
       </div>
 
       {/* GRID */}
       <div className="max-w-7xl mx-auto mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
         {categories.map((category) => (
-          <div
-            key={category.title}
-            className="group relative overflow-hidden rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl"
+          <Link
+            key={category.id}
+            to={`/categorias/${category.id}`}
           >
+            <div className="group relative overflow-hidden rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl cursor-pointer">
 
-            {/* Gradient */}
-            <div
-              className={`absolute inset-0 opacity-50 bg-gradient-to-br ${category.color}`}
-            />
+              {/* GRADIENT */}
+              <div
+                className={`absolute inset-0 opacity-50 bg-gradient-to-br ${category.color}`}
+              />
 
-            <div className="relative p-8">
+              <div className="relative p-8">
 
-              <div className="mb-6">
-                {category.icon}
+                {/* ICON */}
+                <div className="mb-6">
+                  {category.icon}
+                </div>
+
+                {/* POSTS */}
+                <span className="text-sm text-zinc-500">
+                  {category.posts} artículos
+                </span>
+
+                {/* TITLE */}
+                <h2 className="text-2xl font-bold mt-2 group-hover:text-blue-500 transition">
+                  {category.title}
+                </h2>
+
+                {/* DESC */}
+                <p className="text-zinc-500 mt-4 leading-relaxed">
+                  {category.description}
+                </p>
+
+                {/* CTA */}
+                <div className="mt-6 flex items-center gap-2 text-blue-500 font-semibold">
+                  Explorar
+
+                  <ArrowRight
+                    size={16}
+                    className="group-hover:translate-x-1 transition"
+                  />
+                </div>
+
               </div>
-
-              <span className="text-sm text-zinc-500">
-                {category.posts} artículos
-              </span>
-
-              <h2 className="text-2xl font-bold mt-2">
-                {category.title}
-              </h2>
-
-              <p className="text-zinc-500 mt-4 leading-relaxed">
-                {category.description}
-              </p>
-
-              <div className="mt-6 flex items-center gap-2 text-blue-500 font-semibold">
-                Explorar
-                <ArrowRight
-                  size={16}
-                  className="group-hover:translate-x-1 transition"
-                />
-              </div>
-
             </div>
-
-          </div>
+          </Link>
         ))}
-
       </div>
 
       {/* STATS */}
       <div className="max-w-7xl mx-auto mt-20">
-
         <div className="grid md:grid-cols-4 gap-6">
 
           <div className="border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8">
@@ -190,9 +200,7 @@ export default function Categories() {
           </div>
 
         </div>
-
       </div>
-
     </div>
   );
 }

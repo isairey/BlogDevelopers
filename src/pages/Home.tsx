@@ -155,53 +155,53 @@ const handleSubscribe = async () => {
       {/* CATEGORÍAS */}
 
       <section className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-4xl font-bold mb-12">
-          Categorías Populares
-        </h2>
+  <h2 className="text-4xl font-bold mb-12">
+    Categorías Populares
+  </h2>
 
-       <div className="grid md:grid-cols-4 gap-6">
-  {[
-    {
-      icon: <Globe size={30} />,
-      title: "Frontend",
-      desc: "React, Vue, Angular",
-      path: "/frontend",
-    },
-    {
-      icon: <Database size={30} />,
-      title: "Backend",
-      desc: "Spring Boot, Node.js",
-      path: "/backend",
-    },
-    {
-      icon: <Cpu size={30} />,
-      title: "IA",
-      desc: "Machine Learning",
-      path: "/ia",
-    },
-    {
-      icon: <Code2 size={30} />,
-      title: "DevOps",
-      desc: "Docker y Kubernetes",
-      path: "/devops",
-    },
-  ].map((item) => (
-    <Link to={item.path} key={item.title}>
-      <div className="border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8 hover:-translate-y-1 transition-all cursor-pointer">
-        <div className="mb-4">{item.icon}</div>
+  <div className="grid md:grid-cols-4 gap-6">
+    {[
+      {
+        icon: <Globe size={30} />,
+        title: "Frontend",
+        desc: "React, Vue, Angular",
+        path: "/categorias/frontend",
+      },
+      {
+        icon: <Database size={30} />,
+        title: "Backend",
+        desc: "Spring Boot, Node.js",
+        path: "/categorias/backend",
+      },
+      {
+        icon: <Cpu size={30} />,
+        title: "IA",
+        desc: "Machine Learning",
+        path: "/categorias/inteligencia-artificial",
+      },
+      {
+        icon: <Code2 size={30} />,
+        title: "DevOps",
+        desc: "Docker y Kubernetes",
+        path: "/categorias/devops",
+      },
+    ].map((item) => (
+      <Link to={item.path} key={item.title}>
+        <div className="border border-zinc-200 dark:border-zinc-800 rounded-3xl p-8 hover:-translate-y-1 transition-all cursor-pointer">
+          <div className="mb-4">{item.icon}</div>
 
-        <h3 className="font-bold text-xl">
-          {item.title}
-        </h3>
+          <h3 className="font-bold text-xl">
+            {item.title}
+          </h3>
 
-        <p className="text-zinc-500 mt-2">
-          {item.desc}
-        </p>
-      </div>
-    </Link>
-  ))}
-</div>
-      </section>
+          <p className="text-zinc-500 mt-2">
+            {item.desc}
+          </p>
+        </div>
+      </Link>
+    ))}
+  </div>
+</section>
 
       {/* ARTÍCULOS */}
 
