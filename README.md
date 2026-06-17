@@ -58,58 +58,6 @@ El proyecto fue desarrollado para practicar:
 
 ---
 
-# 📸 Preview
-
-## 🏠 Página Principal
-
-<div align="center">
-
-<img src="screenshots/home.png" width="900"/>
-
-</div>
-
----
-
-## 📰 Lista de Artículos
-
-<div align="center">
-
-<img src="screenshots/articles.png" width="900"/>
-
-</div>
-
----
-
-## 📖 Vista de Artículo
-
-<div align="center">
-
-<img src="screenshots/post.png" width="900"/>
-
-</div>
-
----
-
-## ✍️ Editor de Publicaciones
-
-<div align="center">
-
-<img src="screenshots/editor.png" width="900"/>
-
-</div>
-
----
-
-## 👤 Perfil del Desarrollador
-
-<div align="center">
-
-<img src="screenshots/profile.png" width="900"/>
-
-</div>
-
----
-
 # ✨ Características
 
 ## 👤 Sistema de Usuarios
