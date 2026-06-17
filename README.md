@@ -1,73 +1,437 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="220" src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" />
 
-Currently, two official plugins are available:
+# 💻 DevBlog
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Plataforma de blogs y artículos para desarrolladores construida con React y TypeScript 🚀
 
-## React Compiler
+<p align="center">
+  <b>DevBlog</b> es una plataforma moderna diseñada para que desarrolladores compartan conocimientos, publiquen artículos técnicos, creen tutoriales y construyan una comunidad alrededor de la programación, tecnología y desarrollo de software.
+</p>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<p align="center">
+  <img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+  <img src="https://img.shields.io/badge/TypeScript-Type%20Safe-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/TailwindCSS-UI-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white">
+  <img src="https://img.shields.io/badge/Developer-Blog-orange?style=for-the-badge">
+</p>
 
-## Expanding the ESLint configuration
+<p align="center">
+  <a href="#-acerca-de-devblog">Acerca de</a> •
+  <a href="#-preview">Preview</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-tecnologías-utilizadas">Tecnologías</a> •
+  <a href="#-instalación">Instalación</a>
+</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+</div>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 🌌 Acerca de DevBlog
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**DevBlog** es una plataforma enfocada en la comunidad de desarrolladores, donde programadores pueden compartir experiencias, publicar tutoriales, documentar proyectos y explorar contenido técnico de alta calidad.
+
+La plataforma busca convertirse en un espacio para el aprendizaje continuo y el intercambio de conocimiento entre desarrolladores de diferentes tecnologías.
+
+Permite:
+
+- 📝 Publicar artículos técnicos
+- 💻 Compartir tutoriales de programación
+- 🔍 Buscar contenido por tecnología
+- ❤️ Guardar publicaciones favoritas
+- 💬 Comentar artículos
+- 👤 Crear perfiles de desarrollador
+- 📚 Organizar contenido por categorías
+- 📈 Analizar métricas de lectura
+
+El proyecto fue desarrollado para practicar:
+
+- React
+- TypeScript
+- Arquitectura Frontend Moderna
+- Diseño UI/UX
+- Gestión de Estados
+- Desarrollo Full Stack
+- Plataformas de Contenido
+
+---
+
+# 📸 Preview
+
+## 🏠 Página Principal
+
+<div align="center">
+
+<img src="screenshots/home.png" width="900"/>
+
+</div>
+
+---
+
+## 📰 Lista de Artículos
+
+<div align="center">
+
+<img src="screenshots/articles.png" width="900"/>
+
+</div>
+
+---
+
+## 📖 Vista de Artículo
+
+<div align="center">
+
+<img src="screenshots/post.png" width="900"/>
+
+</div>
+
+---
+
+## ✍️ Editor de Publicaciones
+
+<div align="center">
+
+<img src="screenshots/editor.png" width="900"/>
+
+</div>
+
+---
+
+## 👤 Perfil del Desarrollador
+
+<div align="center">
+
+<img src="screenshots/profile.png" width="900"/>
+
+</div>
+
+---
+
+# ✨ Características
+
+## 👤 Sistema de Usuarios
+
+- 🔐 Registro e inicio de sesión
+- 👤 Perfil profesional
+- 🏆 Historial de publicaciones
+- 📊 Estadísticas personales
+- ⚡ Gestión de cuenta
+
+---
+
+## ✍️ Publicación de Contenido
+
+- 📝 Editor Markdown
+- 📚 Publicación de artículos
+- 🏷️ Etiquetas personalizadas
+- 📂 Categorías técnicas
+- 🖼️ Inserción de imágenes
+- 💻 Bloques de código
+
+---
+
+## 💬 Comunidad
+
+- ❤️ Likes y favoritos
+- 💬 Comentarios
+- 👥 Seguimiento de autores
+- 🔔 Notificaciones
+- 📢 Compartir publicaciones
+
+---
+
+## 🔍 Exploración de Contenido
+
+- 🔎 Buscador avanzado
+- 📚 Filtrado por tecnologías
+- 🔥 Artículos populares
+- 🆕 Publicaciones recientes
+- 🎯 Recomendaciones personalizadas
+
+---
+
+# 📚 Categorías Disponibles
+
+## 🚀 Desarrollo Web
+
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- React
+- Vue
+- Angular
+- Next.js
+
+---
+
+## ⚙️ Backend
+
+- Node.js
+- Express
+- NestJS
+- PHP
+- Laravel
+- Spring Boot
+- Django
+- FastAPI
+
+---
+
+## ☁️ DevOps & Cloud
+
+- Docker
+- Kubernetes
+- AWS
+- Azure
+- Google Cloud
+- CI/CD
+
+---
+
+## 🤖 Inteligencia Artificial
+
+- Machine Learning
+- Deep Learning
+- OpenAI
+- Ollama
+- LangChain
+- IA Generativa
+
+---
+
+# 🛠️ Tecnologías Utilizadas
+
+## 💻 Frontend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind,html,css" />
+</p>
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Axios
+
+---
+
+## ⚙️ Backend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs" />
+</p>
+
+- Node.js
+- Express
+- NestJS
+- REST API
+- JWT Authentication
+
+---
+
+## 🗄️ Base de Datos
+
+<p>
+  <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,supabase" />
+</p>
+
+- PostgreSQL
+- MongoDB
+- MySQL
+- Supabase
+
+---
+
+# 📂 Estructura del Proyecto
+
+```bash
+DevBlog/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── layouts/
+│   ├── services/
+│   ├── hooks/
+│   ├── context/
+│   ├── routes/
+│   ├── types/
+│   ├── utils/
+│   └── App.tsx
+│
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# ⚡ Instalación
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 1️⃣ Clonar repositorio
+
+```bash
+git clone https://github.com/isairey/devblog
 ```
+
+---
+
+## 2️⃣ Instalar dependencias
+
+```bash
+npm install
+```
+
+---
+
+## 3️⃣ Configurar variables de entorno
+
+```env
+VITE_API_URL=
+VITE_APP_NAME=DevBlog
+```
+
+---
+
+## 4️⃣ Ejecutar proyecto
+
+```bash
+npm run dev
+```
+
+---
+
+# 🔥 Funcionalidades Técnicas
+
+## ⚡ Rendimiento
+
+- Lazy Loading
+- Code Splitting
+- Optimización SEO
+- Caché inteligente
+- Renderizado rápido
+
+---
+
+## 🔐 Seguridad
+
+- JWT Authentication
+- Protección de rutas
+- Validación de formularios
+- Sanitización de contenido
+- Roles y permisos
+
+---
+
+## 📱 Responsive Design
+
+- Mobile First
+- Tablet Friendly
+- Desktop Optimized
+- Navegación adaptable
+- UI moderna
+
+---
+
+# 🧠 Objetivos del Proyecto
+
+## 🎯 Aprender y practicar
+
+- React Avanzado
+- TypeScript
+- Sistemas de Contenido
+- Arquitectura Frontend
+- Diseño Responsive
+- Gestión de Usuarios
+- Desarrollo Full Stack
+
+---
+
+# 📊 Roadmap
+
+## 🚧 Próximamente
+
+- 🤖 Recomendaciones con IA
+- 🎙️ Artículos en audio
+- 📚 Newsletter integrada
+- 🎥 Soporte para video tutoriales
+- 🌙 Modo oscuro avanzado
+- 📱 Aplicación móvil
+- 🏆 Sistema de reputación
+- 🔥 Trending Topics
+
+---
+
+# 🤝 Contribuciones
+
+Las contribuciones son bienvenidas ❤️
+
+## Cómo contribuir
+
+1. Haz Fork del proyecto
+
+2. Crea una rama
+
+```bash
+git checkout -b feature/nueva-funcion
+```
+
+3. Realiza cambios
+
+```bash
+git commit -m "✨ Nueva funcionalidad"
+```
+
+4. Haz push
+
+```bash
+git push origin feature/nueva-funcion
+```
+
+5. Abre un Pull Request 🚀
+
+---
+
+# 👨‍💻 Fundador
+
+<div align="center">
+
+<img width="140" src="https://github.com/isairey.png" />
+
+## Isai Reyes — Full Stack Developer
+
+Apasionado por el desarrollo web, comunidades tecnológicas, inteligencia artificial y plataformas de aprendizaje.
+
+</div>
+
+---
+
+# 🌟 Apoya el Proyecto
+
+Si te gusta DevBlog:
+
+⭐ Dale una estrella al repositorio  
+🍴 Haz Fork del proyecto  
+📢 Comparte la plataforma con otros desarrolladores
+
+---
+
+# 📜 Licencia
+
+Proyecto Open Source desarrollado con fines educativos y para fomentar el intercambio de conocimiento entre desarrolladores.
+
+---
+
+<div align="center">
+
+### 💻 DevBlog — Aprende, comparte y crece junto a la comunidad de desarrolladores.
+
+</div>
